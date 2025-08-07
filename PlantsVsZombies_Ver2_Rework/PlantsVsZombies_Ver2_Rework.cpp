@@ -3,6 +3,7 @@
 
 #include "framework.h"
 #include "PlantsVsZombies_Ver2_Rework.h"
+#include "Main/MainGame.h"
 
 #define MAX_LOADSTRING 100
 
@@ -10,6 +11,8 @@
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
+
+MainGame* g_mainGame = nullptr;
 
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -37,6 +40,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     {
         return FALSE;
     }
+
+    HWND hWnd = FindWindow(szWindowClass, szTitle);
+
+    g_mainGame = MainGame::GetI();
+    g_mainGame->Init(hWnd);
 
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_PLANTSVSZOMBIESVER2REWORK));
 
@@ -142,13 +150,23 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             }
         }
         break;
+    case WM_TIMER:
+        if (g_mainGame)
+            g_mainGame->Update();
+        break;
     case WM_PAINT:
-        {
-            PAINTSTRUCT ps;
-            HDC hdc = BeginPaint(hWnd, &ps);
-            // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
-            EndPaint(hWnd, &ps);
-        }
+    {
+        if (g_mainGame)
+            g_mainGame->Draw(hWnd);
+    }
+    break;
+    case WM_MOUSEMOVE:
+        //if (g_mainGame)
+            //g_mainGame->SetMousePosition(Point(GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam)));
+        break;
+    case WM_LBUTTONDOWN:
+        //if (g_mainGame)
+            //g_mainGame->ClickOccured();
         break;
     case WM_DESTROY:
         PostQuitMessage(0);

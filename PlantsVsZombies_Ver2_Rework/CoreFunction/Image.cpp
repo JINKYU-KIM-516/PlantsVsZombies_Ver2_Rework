@@ -1,0 +1,39 @@
+#include "Image.h"
+
+Image::Image(Point p_pos, Size p_size, const wstring p_imagePath)
+{
+	m_position = p_pos;
+	m_size = p_size;
+	m_imagePath = p_imagePath;
+}
+Image::~Image()
+{
+
+}
+
+void Image::Draw(HDC hdc)
+{
+
+}
+
+Point Image::GetPos() const
+{
+
+}
+Size Image::GetSize() const
+{
+
+}
+
+void Image::SetPos(Point p_pos)
+{
+}
+
+void Image::SetSize(Size p_size)
+{
+
+}
+void Image::SetImage(const wstring p_imagePath)
+{
+
+}

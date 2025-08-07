@@ -13,11 +13,17 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\CoreFunction">
+      <UniqueIdentifier>{0c173328-2a9c-4a87-9d20-2b04cf306247}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Main">
+      <UniqueIdentifier>{ac72c8c1-6a18-4b1b-ac65-9df12cb5cb89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Manager">
+      <UniqueIdentifier>{973557f5-2327-4de3-a0b5-0999d887d25c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -27,10 +33,70 @@
     <ClInclude Include="PlantsVsZombies_Ver2_Rework.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="CoreFunction\HitBox.h">
+      <Filter>소스 파일\CoreFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreFunction\IntervalTimer.h">
+      <Filter>소스 파일\CoreFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreFunction\PictureBox.h">
+      <Filter>소스 파일\CoreFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreFunction\Point.h">
+      <Filter>소스 파일\CoreFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreFunction\SingletonT.h">
+      <Filter>소스 파일\CoreFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreFunction\Size.h">
+      <Filter>소스 파일\CoreFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\MainGame.h">
+      <Filter>소스 파일\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Main\Constants.h">
+      <Filter>소스 파일\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\RenderManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreFunction\Image.h">
+      <Filter>소스 파일\CoreFunction</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PlantsVsZombies_Ver2_Rework.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreFunction\HitBox.cpp">
+      <Filter>소스 파일\CoreFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreFunction\IntervalTimer.cpp">
+      <Filter>소스 파일\CoreFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreFunction\PictureBox.cpp">
+      <Filter>소스 파일\CoreFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreFunction\Point.cpp">
+      <Filter>소스 파일\CoreFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreFunction\SingletonT.cpp">
+      <Filter>소스 파일\CoreFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreFunction\Size.cpp">
+      <Filter>소스 파일\CoreFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="Main\MainGame.cpp">
+      <Filter>소스 파일\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\RenderManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreFunction\Image.cpp">
+      <Filter>소스 파일\CoreFunction</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
