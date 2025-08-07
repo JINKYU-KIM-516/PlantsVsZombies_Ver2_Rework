@@ -147,8 +147,8 @@
     <ClCompile Include="CoreFunction\Point.cpp" />
     <ClCompile Include="CoreFunction\SingletonT.cpp" />
     <ClCompile Include="CoreFunction\Size.cpp" />
-    <ClCompile Include="ImageResourceManager.cpp" />
     <ClCompile Include="Main\MainGame.cpp" />
+    <ClCompile Include="Manager\ImageResourceManager.cpp" />
     <ClCompile Include="Manager\RenderManager.cpp" />
     <ClCompile Include="PlantsVsZombies_Ver2_Rework.cpp" />
   </ItemGroup>

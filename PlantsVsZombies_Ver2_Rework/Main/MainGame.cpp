@@ -1,4 +1,7 @@
 #include "MainGame.h"
+#include "../CoreFunction/Image.h"
+#include "../Manager/ImageResourceManager.h"
+#include "../Manager/RenderManager.h"
 
 MainGame::MainGame()
 {
@@ -19,6 +22,8 @@ MainGame::~MainGame()
 void MainGame::Init(HWND p_hWnd)
 {
 	m_hWnd = p_hWnd;
+	ImageResourceManager::GetI();
+	RenderManager::GetI();
 	//m_managerManager = ManagerManager::GetI();
 }
 
@@ -60,6 +65,7 @@ void MainGame::Draw(HWND p_hWnd)
 	FillRect(memDC, &rect, (HBRUSH)(COLOR_WINDOW + 1));
 
 	// 4. 메모리 DC에 그리기
+	RenderManager::GetI()->Render(memDC);
 	//m_managerManager->Draw(memDC);
 	//DebugTextOut(memDC);
 
@@ -73,10 +79,12 @@ void MainGame::Draw(HWND p_hWnd)
 	DeleteDC(memDC);
 
 	EndPaint(p_hWnd, &ps);
-	m_managerManager->Draw(hdc);
+	RenderManager::GetI()->Render(hdc);
+	//m_managerManager->Draw(hdc);
 }
 
 void MainGame::test()
 {
-
+	Image* image = new Image(Point(100, 100), Size(64,64), ZOMBIE_IMAGEPATH);
+	RenderManager::GetI()->AddImage(image);
 }

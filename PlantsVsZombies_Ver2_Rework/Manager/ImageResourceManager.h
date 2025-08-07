@@ -2,6 +2,7 @@
 #include <map>
 #include"../CoreFunction/SingletonT.h"
 using namespace std;
+
 class ImageResourceManager : public SingletonT<ImageResourceManager>
 {
 protected:
