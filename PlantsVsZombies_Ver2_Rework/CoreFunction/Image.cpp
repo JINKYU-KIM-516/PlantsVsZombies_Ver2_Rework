@@ -18,11 +18,11 @@ void Image::Draw(HDC hdc)
 
 Point Image::GetPos() const
 {
-
+	return m_position;
 }
 Size Image::GetSize() const
 {
-
+	return m_size;
 }
 
 void Image::SetPos(Point p_pos)

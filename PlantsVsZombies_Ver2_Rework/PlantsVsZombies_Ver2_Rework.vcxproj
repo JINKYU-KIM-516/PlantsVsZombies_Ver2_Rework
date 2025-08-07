@@ -133,6 +133,7 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="Main\Constants.h" />
     <ClInclude Include="Main\MainGame.h" />
+    <ClInclude Include="Manager\ImageResourceManager.h" />
     <ClInclude Include="Manager\RenderManager.h" />
     <ClInclude Include="PlantsVsZombies_Ver2_Rework.h" />
     <ClInclude Include="Resource.h" />
@@ -146,6 +147,7 @@
     <ClCompile Include="CoreFunction\Point.cpp" />
     <ClCompile Include="CoreFunction\SingletonT.cpp" />
     <ClCompile Include="CoreFunction\Size.cpp" />
+    <ClCompile Include="ImageResourceManager.cpp" />
     <ClCompile Include="Main\MainGame.cpp" />
     <ClCompile Include="Manager\RenderManager.cpp" />
     <ClCompile Include="PlantsVsZombies_Ver2_Rework.cpp" />
