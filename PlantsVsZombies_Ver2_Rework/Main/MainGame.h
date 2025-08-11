@@ -1,10 +1,14 @@
 #pragma once
 #include "../CoreFunction/SingletonT.h"
 #include "Constants.h"
+#include "../Manager/ImageResourceManager.h"
+#include "../Manager/RenderManager.h"
 
 class MainGame :public SingletonT<MainGame>
 {
 protected:
+	//ImageResourceManager* m_imageResourceManager;
+	//RenderManager* m_renderManager;
 	HWND m_hWnd;
 public:
 	MainGame();

@@ -6,14 +6,16 @@ Image::Image(Point p_pos, Size p_size, const wstring p_imagePath)
 {
 	m_position = p_pos;
 	m_size = p_size;
-	SetImage(p_imagePath);
+    m_imagePath = p_imagePath;
+    SetImage(m_imagePath);
     m_depth = 0;
 }
 Image::Image(Point p_pos, Size p_size, const wstring p_imagePath, int p_depth)
 {
     m_position = p_pos;
     m_size = p_size;
-    SetImage(p_imagePath);
+    m_imagePath = p_imagePath;
+    SetImage(m_imagePath);
     m_depth = p_depth;
 }
 
@@ -73,9 +75,10 @@ void Image::SetSize(Size p_size)
 void Image::SetImage(const wstring p_imagePath)
 {
 	m_hBmp = ImageResourceManager::GetI()->Load(p_imagePath);
-    if (!m_hBmp) {
+    //m_hBmp = (HBITMAP)LoadImage(NULL, p_imagePath.c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+    if (m_hBmp == nullptr) {
         MessageBox(NULL, L"Image::SetImage -> 비트맵 로드 실패", L"오류", MB_OK);
-        return;
+        //return;
     }
 }
 

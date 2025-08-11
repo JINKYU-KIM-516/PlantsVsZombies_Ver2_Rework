@@ -1,5 +1,6 @@
 #pragma once
-#include <Windows.h>
+#include <windows.h>
+#pragma comment(lib, "msimg32.lib")
 #include "Point.h"
 #include "Size.h"
 
@@ -9,6 +10,7 @@ protected:
 	Point m_position;
 	Size m_size;
 	HBITMAP m_hBmp;
+	wstring m_imagePath;
 
 	int m_depth;
 public:

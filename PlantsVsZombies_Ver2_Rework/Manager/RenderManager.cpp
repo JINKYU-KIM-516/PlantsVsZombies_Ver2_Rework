@@ -1,5 +1,4 @@
 #include "RenderManager.h"
-#include "../CoreFunction/Image.h"
 
 RenderManager::~RenderManager()
 {

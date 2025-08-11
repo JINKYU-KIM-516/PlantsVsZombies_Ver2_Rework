@@ -1,9 +1,9 @@
 #pragma once
 #include <vector>
 #include "../CoreFunction/SingletonT.h"
-using namespace std;
+#include "../CoreFunction/Image.h"
 
-class Image;
+using namespace std;
 
 class RenderManager : public SingletonT<RenderManager>
 {

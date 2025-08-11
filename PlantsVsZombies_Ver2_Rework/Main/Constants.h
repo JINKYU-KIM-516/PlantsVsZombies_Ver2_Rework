@@ -128,7 +128,7 @@ enum class ZombieState
 #define ZOMBIE_SIZE Size(ZOMBIE_WIDTH, ZOMBIE_HEIGHT)
 
 //일반 좀비
-#define ZOMBIE_IMAGEPATH L"../../Resources_bmp/Zombie/Zombie.bmp"
+#define ZOMBIE_IMAGEPATH L"../Resources_bmp/Zombie/Zombie.bmp"
 #define ZOMBIE_FROZEN_IMAGEPATH L"../Bmp_Resources_ver2/Zombie/Zombie_Frozen.bmp"
 
 #define ZOMBIE_HEALTHPOINT 100

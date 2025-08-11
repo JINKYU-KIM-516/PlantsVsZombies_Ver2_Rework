@@ -1,17 +1,16 @@
 #include "MainGame.h"
 #include "../CoreFunction/Image.h"
-#include "../Manager/ImageResourceManager.h"
-#include "../Manager/RenderManager.h"
+//#include "../Manager/ImageResourceManager.h"
+//#include "../Manager/RenderManager.h"
 
 MainGame::MainGame()
 {
-	Init(nullptr);
+
 }
 
 MainGame::MainGame(HWND p_hWnd)
 {
 	Init(p_hWnd);
-	test();
 }
 
 MainGame::~MainGame()
@@ -22,8 +21,6 @@ MainGame::~MainGame()
 void MainGame::Init(HWND p_hWnd)
 {
 	m_hWnd = p_hWnd;
-	ImageResourceManager::GetI();
-	RenderManager::GetI();
 	//m_managerManager = ManagerManager::GetI();
 }
 
@@ -69,7 +66,6 @@ void MainGame::Draw(HWND p_hWnd)
 	//m_managerManager->Draw(memDC);
 	//DebugTextOut(memDC);
 
-
 	// 5. 실제 화면에 한 번에 출력
 	BitBlt(hdc, 0, 0, width, height, memDC, 0, 0, SRCCOPY);
 
@@ -79,6 +75,7 @@ void MainGame::Draw(HWND p_hWnd)
 	DeleteDC(memDC);
 
 	EndPaint(p_hWnd, &ps);
+
 	RenderManager::GetI()->Render(hdc);
 	//m_managerManager->Draw(hdc);
 }
