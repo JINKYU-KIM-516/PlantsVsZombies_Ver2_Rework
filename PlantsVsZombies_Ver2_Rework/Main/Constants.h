@@ -1,5 +1,12 @@
 #pragma once
 
+enum class Direction
+{
+		NORTH = 8,
+	WEST = 4,	EAST = 6,
+		SOUTH = 2
+};
+
 enum class PlayerState
 {
 	NORMAL, SELECTING, DELETING
@@ -40,19 +47,24 @@ enum class ZombieState
 	//, MAX
 };
 
+#define RESOURCES_PATH L"../Resources_bmp/"
+#define UI_RESOURCES_PATH RESOURCES_PATH L"UI/"
+#define PLANT_RESOURCES_PATH RESOURCES_PATH L"Plant/"
+#define ZOMBIE_RESOURCES_PATH RESOURCES_PATH L"Zombie/"
+
 //타일
 #define TILE_WIDTH 64
 #define TILE_HEIGHT 64
 #define TILE_SIZE Size(TILE_WIDTH, TILE_HEIGHT)
 
-#define TILE_GROUND_BRIGHTER_IMAGEPATH L"../Bmp_Resources_ver2/UI/Ground_Brighter.bmp"
-#define TILE_GROUND_DARKER_IMAGEPATH L"../Bmp_Resources_ver2/UI/Ground_Darker.bmp"
+#define TILE_GROUND_BRIGHTER_IMAGEPATH UI_RESOURCES_PATH L"Ground_Brighter.bmp"
+#define TILE_GROUND_DARKER_IMAGEPATH UI_RESOURCES_PATH L"Ground_Darker.bmp"
 
 //잔디깎기
 #define LAWNMOWER_WIDTH 60
 #define LAWNMOWER_HEIGHT 50
 #define LAWNMOWER_SIZE Size(LAWNMOWER_WIDTH, LAWNMOWER_HEIGHT)
-#define LAWNMOWER_IMAGEPATH L"../Bmp_Resources_ver2/UI/LawnMower.bmp"
+#define LAWNMOWER_IMAGEPATH UI_RESOURCES_PATH L"LawnMower.bmp"
 
 #define LAWNMOWER_MOVESPEED 8
 
@@ -60,7 +72,7 @@ enum class ZombieState
 #define SHOVEL_WIDTH 48
 #define SHOVEL_HEIGHT 48
 #define SHOVEL_SIZE Size(SHOVEL_WIDTH, SHOVEL_HEIGHT)
-#define SHOVEL_IMAGEPATH L"../Bmp_Resources_ver2/UI/Shovel.bmp"
+#define SHOVEL_IMAGEPATH UI_RESOURCES_PATH L"Shovel.bmp"
 
 //식물
 #define PLANT_WIDTH 64
@@ -68,8 +80,8 @@ enum class ZombieState
 #define PLANT_SIZE Size(PLANT_WIDTH, PLANT_HEIGHT)
 
 //식물 - 해바라기 (Sunflower)
-#define SUNFLOWER_IMAGEPATH L"../Bmp_Resources_ver2/Plant/Sunflower/Sunflower.bmp"
-#define SUNFLOWER_GRAYSCALE_IMAGEPATH L"../Bmp_Resources_ver2/Plant/Sunflower/Sunflower_Grayscale.bmp"
+#define SUNFLOWER_IMAGEPATH PLANT_RESOURCES_PATH L"Sunflower/Sunflower.bmp"
+#define SUNFLOWER_GRAYSCALE_IMAGEPATH PLANT_RESOURCES_PATH L"Sunflower/Sunflower_Grayscale.bmp"
 #define SUNFLOWER_COST 50
 
 #define SUNFLOWER_HEALTHPOINT 100
@@ -77,8 +89,8 @@ enum class ZombieState
 #define INTERVAL_SPAWN_SUNLIGHT_BY_SUNFLOWER 3
 
 //식물 - 완두콩 (Pea)
-#define PEA_IMAGEPATH L"../Bmp_Resources_ver2/Plant/Pea/Pea.bmp"
-#define PEA_GRAYSCALE_IMAGEPATH L"../Bmp_Resources_ver2/Plant/Pea/Pea_Grayscale.bmp"
+#define PEA_IMAGEPATH PLANT_RESOURCES_PATH L"Pea/Pea.bmp"
+#define PEA_GRAYSCALE_IMAGEPATH PLANT_RESOURCES_PATH L"Pea/Pea_Grayscale.bmp"
 #define PEA_COST 100
 
 #define PEA_ATTACKPOWER 25
@@ -86,8 +98,8 @@ enum class ZombieState
 #define PEA_HEALTHPOINT 100
 
 //식물 - 얼음콩 (IcePea)
-#define ICEPEA_IMAGEPATH L"../Bmp_Resources_ver2/Plant/IcePea/IcePea.bmp"
-#define ICEPEA_GRAYSCALE_IMAGEPATH L"../Bmp_Resources_ver2/Plant/IcePea/IcePea_Grayscale.bmp"
+#define ICEPEA_IMAGEPATH PLANT_RESOURCES_PATH L"IcePea/IcePea.bmp"
+#define ICEPEA_GRAYSCALE_IMAGEPATH PLANT_RESOURCES_PATH L"IcePea/IcePea_Grayscale.bmp"
 #define ICEPEA_COST 150
 
 #define ICEPEA_HEALTHPOINT 100
@@ -95,10 +107,10 @@ enum class ZombieState
 #define ICEPEA_ATTACKSPEED 3
 
 //식물 - 땅콩 (Nut)
-#define NUT_IMAGEPATH L"../Bmp_Resources_ver2/Plant/Nut/Nut.bmp"
-#define NUT_GRAYSCALE_IMAGEPATH L"../Bmp_Resources_ver2/Plant/Nut/Nut_Grayscale.bmp"
-#define NUT_DAMAGED_IMAGEPATH L"../Bmp_Resources_ver2/Plant/Nut/Nut_Damaged.bmp"
-#define NUT_EMERGENCY_IMAGEPATH L"../Bmp_Resources_ver2/Plant/Nut/Nut_Emergency.bmp"
+#define NUT_IMAGEPATH PLANT_RESOURCES_PATH L"Nut/Nut.bmp"
+#define NUT_GRAYSCALE_IMAGEPATH PLANT_RESOURCES_PATH L"Nut/Nut_Grayscale.bmp"
+#define NUT_DAMAGED_IMAGEPATH PLANT_RESOURCES_PATH L"Nut/Nut_Damaged.bmp"
+#define NUT_EMERGENCY_IMAGEPATH PLANT_RESOURCES_PATH L"Nut/Nut_Emergency.bmp"
 #define NUT_COST 75
 
 #define NUT_HEALTHPOINT 300
@@ -107,7 +119,7 @@ enum class ZombieState
 #define SUNLIGHT_WIDTH 40
 #define SUNLIGHT_HEIGHT 40
 #define SUNLIGHT_SIZE Size(SUNLIGHT_WIDTH, SUNLIGHT_HEIGHT)
-#define SUNLIGHT_IMAGEPATH L"../Bmp_Resources_ver2/Sunlight/Sunlight.bmp"
+#define SUNLIGHT_IMAGEPATH UI_RESOURCES_PATH L"Sunlight.bmp"
 #define SUNLIGHT_MOVESPEED 2
 
 //총알
@@ -115,10 +127,10 @@ enum class ZombieState
 #define BULLET_HEIGHT 16
 #define BULLET_SIZE Size(BULLET_WIDTH, BULLET_HEIGHT)
 
-#define PEA_BULLET_IMAGEPATH L"../Bmp_Resources_ver2/Bullet/PeaBullet.bmp"
+#define PEA_BULLET_IMAGEPATH PLANT_RESOURCES_PATH L"Pea/PeaBullet.bmp"
 #define PEA_BULLET_MOVESPEED 5
 
-#define ICEPEA_BULLET_IMAGEPATH L"../Bmp_Resources_ver2/Bullet/IcePeaBullet.bmp"
+#define ICEPEA_BULLET_IMAGEPATH PLANT_RESOURCES_PATH L"IcePea/IcePeaBullet.bmp"
 #define ICEPEA_BULLET_MOVESPEED 5
 
 
@@ -128,8 +140,8 @@ enum class ZombieState
 #define ZOMBIE_SIZE Size(ZOMBIE_WIDTH, ZOMBIE_HEIGHT)
 
 //일반 좀비
-#define ZOMBIE_IMAGEPATH L"../Resources_bmp/Zombie/Zombie.bmp"
-#define ZOMBIE_FROZEN_IMAGEPATH L"../Bmp_Resources_ver2/Zombie/Zombie_Frozen.bmp"
+#define ZOMBIE_IMAGEPATH ZOMBIE_RESOURCES_PATH L"Zombie.bmp"
+#define ZOMBIE_FROZEN_IMAGEPATH ZOMBIE_RESOURCES_PATH L"Zombie_Frozen.bmp"
 
 #define ZOMBIE_HEALTHPOINT 100
 #define ZOMBIE_ATTACKPOWER 15
@@ -137,8 +149,8 @@ enum class ZombieState
 #define ZOMBIE_MOVESPEED 1
 
 //고깔 좀비
-#define FUNNEL_ZOMBIE_IMAGEPATH L"../Bmp_Resources_ver2/Zombie/FunnelZombie/FunnelZombie.bmp"
-#define FUNNEL_ZOMBIE_FROZEN_IMAGEPATH L"../Bmp_Resources_ver2/Zombie/FunnelZombie/FunnelZombie_Frozen.bmp"
+#define FUNNEL_ZOMBIE_IMAGEPATH ZOMBIE_RESOURCES_PATH L"FunnelZombie/FunnelZombie.bmp"
+#define FUNNEL_ZOMBIE_FROZEN_IMAGEPATH ZOMBIE_RESOURCES_PATH L"FunnelZombie/FunnelZombie_Frozen.bmp"
 
 #define FUNNEL_ZOMBIE_HEALTHPOINT 150
 #define FUNNEL_ZOMBIE_ATTACKPOWER 15
@@ -146,8 +158,8 @@ enum class ZombieState
 #define FUNNEL_ZOMBIE_MOVESPEED 1
 
 //장대 좀비
-#define POLE_ZOMBIE_IMAGEPATH L"../Bmp_Resources_ver2/Zombie/PoleZombie/PoleZombie.bmp"
-#define POLE_ZOMBIE_FROZEN_IMAGEPATH L"../Bmp_Resources_ver2/Zombie/PoleZombie/PoleZombie_Frozen.bmp"
+#define POLE_ZOMBIE_IMAGEPATH ZOMBIE_RESOURCES_PATH L"PoleZombie/PoleZombie.bmp"
+#define POLE_ZOMBIE_FROZEN_IMAGEPATH ZOMBIE_RESOURCES_PATH L"PoleZombie/PoleZombie_Frozen.bmp"
 
 #define POLE_ZOMBIE_HEALTHPOINT 125
 #define POLE_ZOMBIE_ATTACKPOWER 15
@@ -157,7 +169,7 @@ enum class ZombieState
 #define POLE_WIDTH 45 * 3
 #define POLE_HEIGHT 8
 #define POLE_SIZE Size(POLE_WIDTH, POLE_HEIGHT)
-#define POLE_IMAGEPATH L"../Bmp_Resources_ver2/Zombie/PoleZombie/Pole.bmp"
+#define POLE_IMAGEPATH ZOMBIE_RESOURCES_PATH L"PoleZombie/Pole.bmp"
 
 
 //게임보드

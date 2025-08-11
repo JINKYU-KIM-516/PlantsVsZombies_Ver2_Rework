@@ -1,5 +1,5 @@
 #include "MainGame.h"
-#include "../CoreFunction/Image.h"
+#include "../Component/Image.h"
 
 #include "../Manager/SystemManagers/ImageResourceManager.h"
 #include "../Manager/SystemManagers/RenderManager.h"
@@ -87,6 +87,6 @@ void MainGame::Draw(HWND p_hWnd)
 
 void MainGame::test()
 {
-	Image* image = new Image(Point(100, 100), Size(64,64), ZOMBIE_IMAGEPATH);
-	RenderManager::GetI()->AddImage(image);
+	//Image* image = new Image(Point(100, 100), Size(64,64), ZOMBIE_IMAGEPATH);
+	//RenderManager::GetI()->AddImage(image);
 }

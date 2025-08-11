@@ -1,5 +1,4 @@
 #include "PictureBox.h"
-#include "Image.h"
 
 PictureBox::PictureBox(Point p_pos, Size p_size, const wstring p_imagePath)
 {

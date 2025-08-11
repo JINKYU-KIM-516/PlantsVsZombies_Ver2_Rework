@@ -8,9 +8,11 @@ void GameBoardManager::Init()
 		for (int x = 0; x < GAMEBOARD_WIDTH; x++)
 		{
 			count++;
-			Tile* tile = new Tile(Point(GAMEBOARD_START_X + x * TILE_WIDTH, GAMEBOARD_START_Y + y * TILE_HEIGHT), count % 2);
+			Point* pos = new Point(GAMEBOARD_START_X + x * TILE_WIDTH, GAMEBOARD_START_Y + y * TILE_HEIGHT);
+			Tile* tile = new Tile(pos, count % 2);
 			AddTile(tile);
 		}
+		count++;
 	}
 }
 

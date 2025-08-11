@@ -123,15 +123,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CoreFunction\HitBox.h" />
-    <ClInclude Include="CoreFunction\Image.h" />
+    <ClInclude Include="Component\Component.h" />
+    <ClInclude Include="Component\HitBox.h" />
+    <ClInclude Include="Component\Image.h" />
+    <ClInclude Include="Component\Move.h" />
+    <ClInclude Include="Component\PictureBox.h" />
     <ClInclude Include="CoreFunction\IntervalTimer.h" />
-    <ClInclude Include="CoreFunction\PictureBox.h" />
     <ClInclude Include="CoreFunction\Point.h" />
     <ClInclude Include="CoreFunction\SingletonT.h" />
     <ClInclude Include="CoreFunction\Size.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="GameObject\GameBoard\Tile.h" />
+    <ClInclude Include="GameObject\GameObject.h" />
     <ClInclude Include="Main\Constants.h" />
     <ClInclude Include="Main\MainGame.h" />
     <ClInclude Include="Manager\GameObjectManagers\GameBoardManager.h" />
@@ -142,18 +145,21 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CoreFunction\HitBox.cpp" />
-    <ClCompile Include="CoreFunction\Image.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Component\HitBox.cpp" />
+    <ClCompile Include="Component\Image.cpp" />
+    <ClCompile Include="Component\PictureBox.cpp" />
     <ClCompile Include="CoreFunction\IntervalTimer.cpp" />
-    <ClCompile Include="CoreFunction\PictureBox.cpp" />
     <ClCompile Include="CoreFunction\Point.cpp" />
     <ClCompile Include="CoreFunction\SingletonT.cpp" />
     <ClCompile Include="CoreFunction\Size.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameObject\GameBoard\Tile.cpp" />
     <ClCompile Include="Main\MainGame.cpp" />
     <ClCompile Include="Manager\GameObjectManagers\GameBoardManager.cpp" />
     <ClCompile Include="Manager\SystemManagers\ImageResourceManager.cpp" />
     <ClCompile Include="Manager\SystemManagers\RenderManager.cpp" />
+    <ClCompile Include="Move.cpp" />
     <ClCompile Include="PlantsVsZombies_Ver2_Rework.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,7 @@
 #include "../Manager/SystemManagers/RenderManager.h"
 #include "../Main/Constants.h"
 
-Image::Image(Point p_pos, Size p_size, const wstring p_imagePath)
+Image::Image(Point* p_pos, Size* p_size, const wstring p_imagePath)
 {
 	m_position = p_pos;
 	m_size = p_size;
@@ -12,7 +12,7 @@ Image::Image(Point p_pos, Size p_size, const wstring p_imagePath)
     m_depth = 0;
     RenderManager::GetI()->AddImage(this);
 }
-Image::Image(Point p_pos, Size p_size, const wstring p_imagePath, int p_depth)
+Image::Image(Point* p_pos, Size* p_size, const wstring p_imagePath, int p_depth)
 {
     m_position = p_pos;
     m_size = p_size;
@@ -40,8 +40,8 @@ void Image::Draw(HDC p_hdc)
     HGDIOBJ oldBmp = SelectObject(hdcMem, m_hBmp);
 
     TransparentBlt(p_hdc,
-        m_position.GetX(), m_position.GetY(),
-        m_size.GetWidth(), m_size.GetHeight(),
+        m_position->GetX(), m_position->GetY(),
+        m_size->GetWidth(), m_size->GetHeight(),
         hdcMem, 0, 0, bmp.bmWidth, bmp.bmHeight,
         TRANSPARENT_COLOR);
 
@@ -49,12 +49,12 @@ void Image::Draw(HDC p_hdc)
     DeleteDC(hdcMem);
 }
 
-Point Image::GetPos() const
+Point* Image::GetPos() const
 {
 	return m_position;
 }
 
-Size Image::GetSize() const
+Size* Image::GetSize() const
 {
 	return m_size;
 }
@@ -64,12 +64,12 @@ int Image::GetDepth() const
     return m_depth;
 }
 
-void Image::SetPos(Point p_pos)
+void Image::SetPos(Point* p_pos)
 {
 	m_position = p_pos;
 }
 
-void Image::SetSize(Size p_size)
+void Image::SetSize(Size* p_size)
 {
 	m_size = p_size;
 }

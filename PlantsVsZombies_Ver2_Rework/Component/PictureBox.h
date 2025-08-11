@@ -2,8 +2,8 @@
 #include <windows.h>
 #pragma comment(lib, "msimg32.lib")
 #include <string>
-#include "Point.h"
-#include "Size.h"
+#include "../CoreFunction/Point.h"
+#include "../CoreFunction/Size.h"
 #include "HitBox.h"
 #include "../Main/Constants.h"
 

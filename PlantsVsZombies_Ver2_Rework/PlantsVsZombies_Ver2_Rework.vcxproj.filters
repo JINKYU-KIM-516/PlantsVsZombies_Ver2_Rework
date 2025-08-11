@@ -31,6 +31,9 @@
     <Filter Include="소스 파일\Manager\GameObjectManagers">
       <UniqueIdentifier>{d2aa7c31-4084-457a-bcfa-a7201bd408ea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Component">
+      <UniqueIdentifier>{3b6d322d-7edd-4b02-b502-fddfb0d93b9f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -42,13 +45,7 @@
     <ClInclude Include="PlantsVsZombies_Ver2_Rework.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="CoreFunction\HitBox.h">
-      <Filter>소스 파일\CoreFunction</Filter>
-    </ClInclude>
     <ClInclude Include="CoreFunction\IntervalTimer.h">
-      <Filter>소스 파일\CoreFunction</Filter>
-    </ClInclude>
-    <ClInclude Include="CoreFunction\PictureBox.h">
       <Filter>소스 파일\CoreFunction</Filter>
     </ClInclude>
     <ClInclude Include="CoreFunction\Point.h">
@@ -69,9 +66,6 @@
     <ClInclude Include="framework.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="CoreFunction\Image.h">
-      <Filter>소스 파일\CoreFunction</Filter>
-    </ClInclude>
     <ClInclude Include="Manager\SystemManagers\ImageResourceManager.h">
       <Filter>소스 파일\Manager\SystemManagers</Filter>
     </ClInclude>
@@ -81,7 +75,25 @@
     <ClInclude Include="GameObject\GameBoard\Tile.h">
       <Filter>소스 파일\GameObject</Filter>
     </ClInclude>
+    <ClInclude Include="Component\HitBox.h">
+      <Filter>소스 파일\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Image.h">
+      <Filter>소스 파일\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\PictureBox.h">
+      <Filter>소스 파일\Component</Filter>
+    </ClInclude>
     <ClInclude Include="Manager\GameObjectManagers\GameBoardManager.h">
+      <Filter>소스 파일\Manager\GameObjectManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Move.h">
+      <Filter>소스 파일\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\Component.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\GameObject.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -89,13 +101,7 @@
     <ClCompile Include="PlantsVsZombies_Ver2_Rework.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="CoreFunction\HitBox.cpp">
-      <Filter>소스 파일\CoreFunction</Filter>
-    </ClCompile>
     <ClCompile Include="CoreFunction\IntervalTimer.cpp">
-      <Filter>소스 파일\CoreFunction</Filter>
-    </ClCompile>
-    <ClCompile Include="CoreFunction\PictureBox.cpp">
       <Filter>소스 파일\CoreFunction</Filter>
     </ClCompile>
     <ClCompile Include="CoreFunction\Point.cpp">
@@ -110,9 +116,6 @@
     <ClCompile Include="Main\MainGame.cpp">
       <Filter>소스 파일\Main</Filter>
     </ClCompile>
-    <ClCompile Include="CoreFunction\Image.cpp">
-      <Filter>소스 파일\CoreFunction</Filter>
-    </ClCompile>
     <ClCompile Include="Manager\SystemManagers\ImageResourceManager.cpp">
       <Filter>소스 파일\Manager\SystemManagers</Filter>
     </ClCompile>
@@ -122,7 +125,25 @@
     <ClCompile Include="GameObject\GameBoard\Tile.cpp">
       <Filter>소스 파일\GameObject</Filter>
     </ClCompile>
+    <ClCompile Include="Component\HitBox.cpp">
+      <Filter>소스 파일\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\Image.cpp">
+      <Filter>소스 파일\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\PictureBox.cpp">
+      <Filter>소스 파일\Component</Filter>
+    </ClCompile>
     <ClCompile Include="Manager\GameObjectManagers\GameBoardManager.cpp">
+      <Filter>소스 파일\Manager\GameObjectManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="Move.cpp">
+      <Filter>소스 파일\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
