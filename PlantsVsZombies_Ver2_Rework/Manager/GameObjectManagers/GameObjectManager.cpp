@@ -4,9 +4,9 @@
 #include "../../GameObject/GameBoard/Tile.h"
 #include "../../GameObject/Zombie/Zombie.h"
 
-void GameObjectManager::Init()
+//protected
+void GameObjectManager::CreateGameBoard()
 {
-	//tile 积己
 	int count = 0;
 	for (int y = 0; y < GAMEBOARD_HEIGHT; y++)
 	{
@@ -19,20 +19,52 @@ void GameObjectManager::Init()
 		}
 		count++;
 	}
+}
+
+void GameObjectManager::SpawnZombieRandom()
+{
+	if (m_zombieSpawnTimer.HasElapsed())
+	{
+		int row = rand() % GAMEBOARD_HEIGHT;
+		int x = GAMEBOARD_START_X + (TILE_WIDTH * GAMEBOARD_WIDTH);
+		int y = GAMEBOARD_START_Y + (TILE_HEIGHT * row);
+		
+		SpawnZombie(new Point(x, y));
+
+		m_zombieSpawnTimer.Tick();
+	}
+}
+
+//public
+void GameObjectManager::Init()
+{
+	m_zombieSpawnTimer.Init(INTERVAL_SPAWN_ZOMBIE);
+	CreateGameBoard();
 
 	//test侩 粱厚 积己
-	Point* zombiePos = new Point(GAMEBOARD_START_X + (11 * TILE_WIDTH), GAMEBOARD_START_Y + (2 * TILE_HEIGHT));
-	Zombie* zombie = new Zombie(zombiePos);
-	AddGameObject(zombie);
+	//SpawnZombie(new Point(GAMEBOARD_START_X + (11 * TILE_WIDTH), GAMEBOARD_START_Y + (2 * TILE_HEIGHT)));
 }
 
 void GameObjectManager::Update()
 {
 	for (auto object : m_objects)
 		object->Update();
+	SpawnZombieRandom();
 }
 
 void GameObjectManager::AddGameObject(GameObject* p_object)
 {
 	m_objects.push_back(p_object);
+}
+
+void GameObjectManager::DeleteObject(GameObject* p_object)
+{
+	m_objects.erase(remove(m_objects.begin(), m_objects.end(), p_object), m_objects.end());
+	delete p_object;
+}
+
+void GameObjectManager::SpawnZombie(Point* p_pos)
+{
+	Zombie* zombie = new Zombie(p_pos);
+	AddGameObject(zombie);
 }
