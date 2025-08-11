@@ -1,14 +1,16 @@
 #pragma once
 #include "../GameObject.h"
 #include "../../Component/Image.h"
+#include "../../Component/Move.h"
 
-class Tile : public GameObject
+class Zombie : public GameObject
 {
 protected:
 	Point* m_pos;
 	Size* m_size;
 	Image* m_image;
+	Move* m_move;
 public:
-	Tile(Point* p_pos, int p_num);
-	void Init(Point* p_pos, int p_num);
+	Zombie(Point* p_pos);
+	void Init(Point* p_pos);
 };

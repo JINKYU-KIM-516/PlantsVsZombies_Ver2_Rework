@@ -4,6 +4,7 @@
 #include "../Manager/SystemManagers/ImageResourceManager.h"
 #include "../Manager/SystemManagers/RenderManager.h"
 
+#include "../Manager/GameObjectManagers/GameObjectManager.h"
 #include "../Manager/GameObjectManagers/GameBoardManager.h"
 
 
@@ -25,13 +26,15 @@ MainGame::~MainGame()
 void MainGame::Init(HWND p_hWnd)
 {
 	m_hWnd = p_hWnd;
-	GameBoardManager::GetI()->Init();
 	//m_managerManager = ManagerManager::GetI();
+	//GameBoardManager::GetI()->Init();
+	GameObjectManager::GetI()->Init();
 }
 
 void MainGame::Update()
 {
 	//m_managerManager->Update();
+	GameObjectManager::GetI()->Update();
 	ClickHandle();
 	InvalidateRect(m_hWnd, NULL, FALSE);
 }

@@ -135,9 +135,11 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="GameObject\GameBoard\Tile.h" />
     <ClInclude Include="GameObject\GameObject.h" />
+    <ClInclude Include="GameObject\Zombie\Zombie.h" />
     <ClInclude Include="Main\Constants.h" />
     <ClInclude Include="Main\MainGame.h" />
     <ClInclude Include="Manager\GameObjectManagers\GameBoardManager.h" />
+    <ClInclude Include="Manager\GameObjectManagers\GameObjectManager.h" />
     <ClInclude Include="Manager\SystemManagers\ImageResourceManager.h" />
     <ClInclude Include="Manager\SystemManagers\RenderManager.h" />
     <ClInclude Include="PlantsVsZombies_Ver2_Rework.h" />
@@ -145,21 +147,23 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Component\Component.cpp" />
     <ClCompile Include="Component\HitBox.cpp" />
     <ClCompile Include="Component\Image.cpp" />
+    <ClCompile Include="Component\Move.cpp" />
     <ClCompile Include="Component\PictureBox.cpp" />
     <ClCompile Include="CoreFunction\IntervalTimer.cpp" />
     <ClCompile Include="CoreFunction\Point.cpp" />
     <ClCompile Include="CoreFunction\SingletonT.cpp" />
     <ClCompile Include="CoreFunction\Size.cpp" />
-    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameObject\GameBoard\Tile.cpp" />
+    <ClCompile Include="GameObject\GameObject.cpp" />
+    <ClCompile Include="GameObject\Zombie\Zombie.cpp" />
     <ClCompile Include="Main\MainGame.cpp" />
     <ClCompile Include="Manager\GameObjectManagers\GameBoardManager.cpp" />
+    <ClCompile Include="Manager\GameObjectManagers\GameObjectManager.cpp" />
     <ClCompile Include="Manager\SystemManagers\ImageResourceManager.cpp" />
     <ClCompile Include="Manager\SystemManagers\RenderManager.cpp" />
-    <ClCompile Include="Move.cpp" />
     <ClCompile Include="PlantsVsZombies_Ver2_Rework.cpp" />
   </ItemGroup>
   <ItemGroup>
