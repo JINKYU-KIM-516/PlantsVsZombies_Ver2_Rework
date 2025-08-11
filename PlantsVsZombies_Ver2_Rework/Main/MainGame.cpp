@@ -1,11 +1,15 @@
 #include "MainGame.h"
 #include "../CoreFunction/Image.h"
-//#include "../Manager/ImageResourceManager.h"
-//#include "../Manager/RenderManager.h"
+
+#include "../Manager/SystemManagers/ImageResourceManager.h"
+#include "../Manager/SystemManagers/RenderManager.h"
+
+#include "../Manager/GameObjectManagers/GameBoardManager.h"
+
 
 MainGame::MainGame()
 {
-
+	m_hWnd = nullptr;
 }
 
 MainGame::MainGame(HWND p_hWnd)
@@ -21,6 +25,7 @@ MainGame::~MainGame()
 void MainGame::Init(HWND p_hWnd)
 {
 	m_hWnd = p_hWnd;
+	GameBoardManager::GetI()->Init();
 	//m_managerManager = ManagerManager::GetI();
 }
 

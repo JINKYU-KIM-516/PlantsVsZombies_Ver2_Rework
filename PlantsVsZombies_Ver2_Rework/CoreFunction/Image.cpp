@@ -1,5 +1,6 @@
 #include "Image.h"
-#include "../Manager/ImageResourceManager.h"
+#include "../Manager/SystemManagers/ImageResourceManager.h"
+#include "../Manager/SystemManagers/RenderManager.h"
 #include "../Main/Constants.h"
 
 Image::Image(Point p_pos, Size p_size, const wstring p_imagePath)
@@ -9,6 +10,7 @@ Image::Image(Point p_pos, Size p_size, const wstring p_imagePath)
     m_imagePath = p_imagePath;
     SetImage(m_imagePath);
     m_depth = 0;
+    RenderManager::GetI()->AddImage(this);
 }
 Image::Image(Point p_pos, Size p_size, const wstring p_imagePath, int p_depth)
 {

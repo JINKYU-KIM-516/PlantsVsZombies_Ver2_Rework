@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
-#include "../CoreFunction/SingletonT.h"
-#include "../CoreFunction/Image.h"
+#include "../../CoreFunction/SingletonT.h"
+#include "../../CoreFunction/Image.h"
 
 using namespace std;
 

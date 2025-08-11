@@ -1,8 +1,8 @@
 #pragma once
 #include "../CoreFunction/SingletonT.h"
 #include "Constants.h"
-#include "../Manager/ImageResourceManager.h"
-#include "../Manager/RenderManager.h"
+//#include "../Manager/SystemManagers/ImageResourceManager.h"
+//#include "../Manager/SystemManagers/RenderManager.h"
 
 class MainGame :public SingletonT<MainGame>
 {

@@ -131,10 +131,12 @@
     <ClInclude Include="CoreFunction\SingletonT.h" />
     <ClInclude Include="CoreFunction\Size.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="GameObject\GameBoard\Tile.h" />
     <ClInclude Include="Main\Constants.h" />
     <ClInclude Include="Main\MainGame.h" />
-    <ClInclude Include="Manager\ImageResourceManager.h" />
-    <ClInclude Include="Manager\RenderManager.h" />
+    <ClInclude Include="Manager\GameObjectManagers\GameBoardManager.h" />
+    <ClInclude Include="Manager\SystemManagers\ImageResourceManager.h" />
+    <ClInclude Include="Manager\SystemManagers\RenderManager.h" />
     <ClInclude Include="PlantsVsZombies_Ver2_Rework.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
@@ -147,9 +149,11 @@
     <ClCompile Include="CoreFunction\Point.cpp" />
     <ClCompile Include="CoreFunction\SingletonT.cpp" />
     <ClCompile Include="CoreFunction\Size.cpp" />
+    <ClCompile Include="GameObject\GameBoard\Tile.cpp" />
     <ClCompile Include="Main\MainGame.cpp" />
-    <ClCompile Include="Manager\ImageResourceManager.cpp" />
-    <ClCompile Include="Manager\RenderManager.cpp" />
+    <ClCompile Include="Manager\GameObjectManagers\GameBoardManager.cpp" />
+    <ClCompile Include="Manager\SystemManagers\ImageResourceManager.cpp" />
+    <ClCompile Include="Manager\SystemManagers\RenderManager.cpp" />
     <ClCompile Include="PlantsVsZombies_Ver2_Rework.cpp" />
   </ItemGroup>
   <ItemGroup>

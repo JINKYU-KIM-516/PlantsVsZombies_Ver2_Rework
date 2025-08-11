@@ -22,6 +22,15 @@
     <Filter Include="소스 파일\Manager">
       <UniqueIdentifier>{973557f5-2327-4de3-a0b5-0999d887d25c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\GameObject">
+      <UniqueIdentifier>{bb3ddd3d-8f8b-45a5-a213-508b83728990}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Manager\SystemManagers">
+      <UniqueIdentifier>{ae8169a2-bb7c-4e1b-ab18-3b7bde86de91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Manager\GameObjectManagers">
+      <UniqueIdentifier>{d2aa7c31-4084-457a-bcfa-a7201bd408ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -63,11 +72,17 @@
     <ClInclude Include="CoreFunction\Image.h">
       <Filter>소스 파일\CoreFunction</Filter>
     </ClInclude>
-    <ClInclude Include="Manager\ImageResourceManager.h">
-      <Filter>소스 파일\Manager</Filter>
+    <ClInclude Include="Manager\SystemManagers\ImageResourceManager.h">
+      <Filter>소스 파일\Manager\SystemManagers</Filter>
     </ClInclude>
-    <ClInclude Include="Manager\RenderManager.h">
-      <Filter>소스 파일\Manager</Filter>
+    <ClInclude Include="Manager\SystemManagers\RenderManager.h">
+      <Filter>소스 파일\Manager\SystemManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\GameBoard\Tile.h">
+      <Filter>소스 파일\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\GameObjectManagers\GameBoardManager.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -98,11 +113,17 @@
     <ClCompile Include="CoreFunction\Image.cpp">
       <Filter>소스 파일\CoreFunction</Filter>
     </ClCompile>
-    <ClCompile Include="Manager\RenderManager.cpp">
-      <Filter>소스 파일\Manager</Filter>
+    <ClCompile Include="Manager\SystemManagers\ImageResourceManager.cpp">
+      <Filter>소스 파일\Manager\SystemManagers</Filter>
     </ClCompile>
-    <ClCompile Include="Manager\ImageResourceManager.cpp">
-      <Filter>소스 파일\Manager</Filter>
+    <ClCompile Include="Manager\SystemManagers\RenderManager.cpp">
+      <Filter>소스 파일\Manager\SystemManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\GameBoard\Tile.cpp">
+      <Filter>소스 파일\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\GameObjectManagers\GameBoardManager.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
