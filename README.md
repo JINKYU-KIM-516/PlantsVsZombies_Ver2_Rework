@@ -13,8 +13,8 @@ png 리소스 파일 추가
 
 ## 2025.8.7
 ### 추가사항
-MainGame 추가 : main 클래스
-ㄴmain에서 실행시키면 게임이 진행되게 해주는 클래스
+* MainGame 추가 : main 클래스
+ * main에서 실행시키면 게임이 진행되게 해주는 클래스
 
 ImageComponent 추가 : bmp 파일 출력
 ㄴ화면에 bmp파일이 출력되게 해주는 Component
