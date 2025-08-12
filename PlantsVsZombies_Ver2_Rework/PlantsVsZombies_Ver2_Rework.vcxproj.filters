@@ -112,7 +112,10 @@
       <Filter>소스 파일\Manager\GameObjectManagers</Filter>
     </ClInclude>
     <ClInclude Include="GameObject\Plant\Plant.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\GameObject\Plant</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\HealthPointComponent.h">
+      <Filter>소스 파일\Component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -171,7 +174,10 @@
       <Filter>소스 파일\Manager\GameObjectManagers</Filter>
     </ClCompile>
     <ClCompile Include="GameObject\Plant\Plant.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\GameObject\Plant</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\HealthPointComponent.cpp">
+      <Filter>소스 파일\Component</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

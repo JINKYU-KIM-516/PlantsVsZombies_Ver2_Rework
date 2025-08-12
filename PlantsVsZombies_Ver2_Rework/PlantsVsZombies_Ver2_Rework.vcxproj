@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Component\Component.h" />
+    <ClInclude Include="Component\HealthPointComponent.h" />
     <ClInclude Include="Component\HitBox.h" />
     <ClInclude Include="Component\Image.h" />
     <ClInclude Include="Component\Move.h" />
@@ -149,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Component\Component.cpp" />
+    <ClCompile Include="Component\HealthPointComponent.cpp" />
     <ClCompile Include="Component\HitBox.cpp" />
     <ClCompile Include="Component\Image.cpp" />
     <ClCompile Include="Component\Move.cpp" />

@@ -11,12 +11,7 @@ protected:
 	Image* m_image;
 	Move* m_move;
 
-	int m_healthPoint;
-	int m_attackPower;
-	int m_attackSpeed;
 
-	bool m_isAlive;
-	void CheckAlive();
 public:
 	Zombie(Point* p_pos);
 	~Zombie();
