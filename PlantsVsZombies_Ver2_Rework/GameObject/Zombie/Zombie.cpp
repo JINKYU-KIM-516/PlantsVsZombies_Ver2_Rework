@@ -16,7 +16,7 @@ void Zombie::Init(Point* p_pos)
 	m_pos = p_pos;
 	m_size = new ZOMBIE_SIZE;
 
-	AddComponent(new Image(m_pos, m_size, ZOMBIE_IMAGEPATH));
-	AddComponent(new Move(m_pos, Direction::WEST, ZOMBIE_MOVESPEED));
+	AddComponent(new ImageComponent(m_pos, m_size, ZOMBIE_IMAGEPATH));
+	AddComponent(new MoveComponent(m_pos, Direction::WEST, ZOMBIE_MOVESPEED));
 	AddComponent(new HealthPointComponent(ZOMBIE_HEALTHPOINT));
 }

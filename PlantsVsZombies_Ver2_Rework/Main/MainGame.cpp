@@ -1,5 +1,5 @@
 #include "MainGame.h"
-#include "../Component/Image.h"
+#include "../Component/ImageComponent.h"
 
 #include "../Manager/SystemManagers/ImageResourceManager.h"
 #include "../Manager/SystemManagers/RenderManager.h"

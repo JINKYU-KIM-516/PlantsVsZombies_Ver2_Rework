@@ -5,7 +5,7 @@
 #include "../CoreFunction/Point.h"
 #include "../CoreFunction/Size.h"
 
-class Image : public Component
+class ImageComponent : public Component
 {
 protected:
 	Point* m_position;
@@ -15,9 +15,9 @@ protected:
 
 	int m_depth;
 public:
-	Image(Point* p_pos, Size* p_size, const wstring p_imagePath);
-	Image(Point* p_pos, Size* p_size, const wstring p_imagePath, int p_depth);
-	~Image();
+	ImageComponent(Point* p_pos, Size* p_size, const wstring p_imagePath);
+	ImageComponent(Point* p_pos, Size* p_size, const wstring p_imagePath, int p_depth);
+	~ImageComponent();
 	void Draw(HDC p_hdc);
 
 	Point* GetPos() const;

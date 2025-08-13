@@ -1,19 +1,19 @@
 #pragma once
 #include <vector>
 #include "../../CoreFunction/SingletonT.h"
-#include "../../Component/Image.h"
+#include "../../Component/ImageComponent.h"
 
 using namespace std;
 
 class RenderManager : public SingletonT<RenderManager>
 {
 protected:
-	vector<Image*> m_images;
+	vector<ImageComponent*> m_images;
 public:
 	~RenderManager();
 
 	void Render(HDC p_hdc);
 
-	void AddImage(Image* p_image);
-	void DeleteImage(Image* p_image);
+	void AddImage(ImageComponent* p_image);
+	void DeleteImage(ImageComponent* p_image);
 };

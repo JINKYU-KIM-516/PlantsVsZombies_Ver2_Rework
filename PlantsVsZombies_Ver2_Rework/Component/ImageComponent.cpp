@@ -1,9 +1,9 @@
-#include "Image.h"
+#include "ImageComponent.h"
 #include "../Manager/SystemManagers/ImageResourceManager.h"
 #include "../Manager/SystemManagers/RenderManager.h"
 #include "../Main/Constants.h"
 
-Image::Image(Point* p_pos, Size* p_size, const wstring p_imagePath)
+ImageComponent::ImageComponent(Point* p_pos, Size* p_size, const wstring p_imagePath)
 {
 	m_position = p_pos;
 	m_size = p_size;
@@ -12,7 +12,7 @@ Image::Image(Point* p_pos, Size* p_size, const wstring p_imagePath)
     m_depth = 0;
     RenderManager::GetI()->AddImage(this);
 }
-Image::Image(Point* p_pos, Size* p_size, const wstring p_imagePath, int p_depth)
+ImageComponent::ImageComponent(Point* p_pos, Size* p_size, const wstring p_imagePath, int p_depth)
 {
     m_position = p_pos;
     m_size = p_size;
@@ -21,12 +21,12 @@ Image::Image(Point* p_pos, Size* p_size, const wstring p_imagePath, int p_depth)
     m_depth = p_depth;
 }
 
-Image::~Image()
+ImageComponent::~ImageComponent()
 {
 	m_hBmp = nullptr;
 }
 
-void Image::Draw(HDC p_hdc)
+void ImageComponent::Draw(HDC p_hdc)
 {
     if (!m_hBmp) {
         MessageBox(NULL, L"Image::Draw -> 비트맵 로드 실패", L"오류", MB_OK);
@@ -49,32 +49,32 @@ void Image::Draw(HDC p_hdc)
     DeleteDC(hdcMem);
 }
 
-Point* Image::GetPos() const
+Point* ImageComponent::GetPos() const
 {
 	return m_position;
 }
 
-Size* Image::GetSize() const
+Size* ImageComponent::GetSize() const
 {
 	return m_size;
 }
 
-int Image::GetDepth() const
+int ImageComponent::GetDepth() const
 {
     return m_depth;
 }
 
-void Image::SetPos(Point* p_pos)
+void ImageComponent::SetPos(Point* p_pos)
 {
 	m_position = p_pos;
 }
 
-void Image::SetSize(Size* p_size)
+void ImageComponent::SetSize(Size* p_size)
 {
 	m_size = p_size;
 }
 
-void Image::SetImage(const wstring p_imagePath)
+void ImageComponent::SetImage(const wstring p_imagePath)
 {
 	m_hBmp = ImageResourceManager::GetI()->Load(p_imagePath);
     //m_hBmp = (HBITMAP)LoadImage(NULL, p_imagePath.c_str(), IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
@@ -84,7 +84,7 @@ void Image::SetImage(const wstring p_imagePath)
     }
 }
 
-void Image::SetDapth(int p_depth)
+void ImageComponent::SetDapth(int p_depth)
 {
     m_depth = p_depth;
 }

@@ -1,18 +1,18 @@
-#include "Move.h"
+#include "MoveComponent.h"
 
-Move::Move(Point* p_pos, Direction p_dir, int p_ms)
+MoveComponent::MoveComponent(Point* p_pos, Direction p_dir, int p_ms)
 {
 	Init(p_pos, p_dir, p_ms);
 }
 
-void Move::Init(Point* p_pos, Direction p_dir, int p_ms)
+void MoveComponent::Init(Point* p_pos, Direction p_dir, int p_ms)
 {
 	m_pos = p_pos;
 	m_direction = p_dir;
 	m_moveSpeed = p_ms;
 }
 
-void Move::Update()
+void MoveComponent::Update()
 {
 	if (m_pos == nullptr)
 		return;

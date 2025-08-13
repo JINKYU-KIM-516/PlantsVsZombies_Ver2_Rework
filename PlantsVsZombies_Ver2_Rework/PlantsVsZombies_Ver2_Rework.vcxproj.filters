@@ -84,7 +84,7 @@
     <ClInclude Include="Component\HitBox.h">
       <Filter>소스 파일\Component</Filter>
     </ClInclude>
-    <ClInclude Include="Component\Image.h">
+    <ClInclude Include="Component\ImageComponent.h">
       <Filter>소스 파일\Component</Filter>
     </ClInclude>
     <ClInclude Include="Component\PictureBox.h">
@@ -93,7 +93,7 @@
     <ClInclude Include="Manager\GameObjectManagers\GameBoardManager.h">
       <Filter>소스 파일\Manager\GameObjectManagers</Filter>
     </ClInclude>
-    <ClInclude Include="Component\Move.h">
+    <ClInclude Include="Component\MoveComponent.h">
       <Filter>소스 파일\Component</Filter>
     </ClInclude>
     <ClInclude Include="GameObject\GameObject.h">
@@ -146,7 +146,7 @@
     <ClCompile Include="Component\HitBox.cpp">
       <Filter>소스 파일\Component</Filter>
     </ClCompile>
-    <ClCompile Include="Component\Image.cpp">
+    <ClCompile Include="Component\ImageComponent.cpp">
       <Filter>소스 파일\Component</Filter>
     </ClCompile>
     <ClCompile Include="Component\PictureBox.cpp">
@@ -155,7 +155,7 @@
     <ClCompile Include="Manager\GameObjectManagers\GameBoardManager.cpp">
       <Filter>소스 파일\Manager\GameObjectManagers</Filter>
     </ClCompile>
-    <ClCompile Include="Component\Move.cpp">
+    <ClCompile Include="Component\MoveComponent.cpp">
       <Filter>소스 파일\Component</Filter>
     </ClCompile>
     <ClCompile Include="GameObject\GameObject.cpp">

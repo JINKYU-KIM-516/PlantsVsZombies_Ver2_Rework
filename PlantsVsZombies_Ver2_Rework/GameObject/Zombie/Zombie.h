@@ -1,7 +1,7 @@
 #pragma once
 #include "../GameObject.h"
-#include "../../Component/Image.h"
-#include "../../Component/Move.h"
+#include "../../Component/ImageComponent.h"
+#include "../../Component/MoveComponent.h"
 #include "../../Component/HealthPointComponent.h"
 
 class Zombie : public GameObject
