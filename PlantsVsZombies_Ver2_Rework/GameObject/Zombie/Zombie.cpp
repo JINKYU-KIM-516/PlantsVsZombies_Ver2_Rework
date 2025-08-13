@@ -8,11 +8,6 @@ Zombie::Zombie(Point* p_pos)
 	Init(p_pos);
 }
 
-Zombie::~Zombie()
-{
-
-}
-
 void Zombie::Init(Point* p_pos)
 {
 	m_position = p_pos;

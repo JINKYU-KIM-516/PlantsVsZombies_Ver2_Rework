@@ -3,11 +3,13 @@
 #include "../CoreFunction/Point.h"
 #include "../Component/Component.h"
 
+class GameObject;
+
 class GameObject
 {
 protected:
+	GameObject* owner = nullptr;
 	std::vector<Component*> m_components;
-
 	Point* m_position;
 public:
 	~GameObject();

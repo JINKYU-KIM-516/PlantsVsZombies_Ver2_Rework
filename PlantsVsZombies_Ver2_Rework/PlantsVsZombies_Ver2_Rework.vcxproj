@@ -136,7 +136,7 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="GameObject\GameBoard\Tile.h" />
     <ClInclude Include="GameObject\GameObject.h" />
-    <ClInclude Include="GameObject\Plant\Plant.h" />
+    <ClInclude Include="GameObject\Plant\Sunflower.h" />
     <ClInclude Include="GameObject\Zombie\Zombie.h" />
     <ClInclude Include="Main\Constants.h" />
     <ClInclude Include="Main\MainGame.h" />
@@ -161,7 +161,7 @@
     <ClCompile Include="CoreFunction\Size.cpp" />
     <ClCompile Include="GameObject\GameBoard\Tile.cpp" />
     <ClCompile Include="GameObject\GameObject.cpp" />
-    <ClCompile Include="GameObject\Plant\Plant.cpp" />
+    <ClCompile Include="GameObject\Plant\Sunflower.cpp" />
     <ClCompile Include="GameObject\Zombie\Zombie.cpp" />
     <ClCompile Include="Main\MainGame.cpp" />
     <ClCompile Include="Manager\GameObjectManagers\GameBoardManager.cpp" />

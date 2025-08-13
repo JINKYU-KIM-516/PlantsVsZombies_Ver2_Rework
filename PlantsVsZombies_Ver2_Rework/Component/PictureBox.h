@@ -4,7 +4,7 @@
 #include <string>
 #include "../CoreFunction/Point.h"
 #include "../CoreFunction/Size.h"
-#include "HitBox.h"
+#include "HitBoxComponent.h"
 #include "../Main/Constants.h"
 
 class PictureBox

@@ -1,9 +1,10 @@
 #pragma once
 #include "../GameObject.h"
 
-class Zombie : public GameObject
+class Sunflower : public GameObject
 {
 public:
-	Zombie(Point* p_pos);
+	Sunflower(Point* p_pos);
 	void Init(Point* p_pos);
 };
+
