@@ -64,3 +64,5 @@ Zombie에 HealthPointComponent 추가</br>
 ## 추가사항
 Component들 이름 수정 : 가독성 증가
 ㄴMove -> MoveComponent, Image -> ImageComponent, HitBox -> HitBoxComponent로 수정
+
+GameObject에 Point\* 멤버변수 추가, Tile과 Zombie에서 Size\* 멤버변수 삭제 : HitBot와 Image의 크기가 다를 수 있기 때문
