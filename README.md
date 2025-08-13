@@ -59,3 +59,8 @@ HealthPointComponent 추가 : 체력(HP)으로, 0 이하가 될 시 해당 개�
 
 Zombie에 HealthPointComponent 추가</br>
 ㄴ이후 Attack 추가 예정
+
+##2025.8.13
+## 추가사항
+Component들 이름 수정 : 가독성 증가
+ㄴMove -> MoveComponent, Image -> ImageComponent, HitBox -> HitBoxComponent로 수정

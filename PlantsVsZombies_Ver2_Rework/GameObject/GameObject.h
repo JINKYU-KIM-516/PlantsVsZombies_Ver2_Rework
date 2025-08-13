@@ -1,12 +1,14 @@
 #pragma once
 #include <vector>
-#include <map>
+#include "../CoreFunction/Point.h"
 #include "../Component/Component.h"
 
 class GameObject
 {
 protected:
 	std::vector<Component*> m_components;
+
+	Point* m_position;
 public:
 	~GameObject();
 	virtual void Init();

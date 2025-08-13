@@ -22,7 +22,7 @@ public:
 
 	Point GetPos() const;
 	Size GetSize() const;
-	HitBox GetHitBox() const;
+	HitBoxComponent GetHitBox() const;
 
 	RECT GetRect() const;
 	bool IsCollided(const PictureBox *p_pictureBox);

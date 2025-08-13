@@ -125,7 +125,7 @@
   <ItemGroup>
     <ClInclude Include="Component\Component.h" />
     <ClInclude Include="Component\HealthPointComponent.h" />
-    <ClInclude Include="Component\HitBox.h" />
+    <ClInclude Include="Component\HitBoxComponent.h" />
     <ClInclude Include="Component\ImageComponent.h" />
     <ClInclude Include="Component\MoveComponent.h" />
     <ClInclude Include="Component\PictureBox.h" />
@@ -151,7 +151,7 @@
   <ItemGroup>
     <ClCompile Include="Component\Component.cpp" />
     <ClCompile Include="Component\HealthPointComponent.cpp" />
-    <ClCompile Include="Component\HitBox.cpp" />
+    <ClCompile Include="Component\HitBoxComponent.cpp" />
     <ClCompile Include="Component\ImageComponent.cpp" />
     <ClCompile Include="Component\MoveComponent.cpp" />
     <ClCompile Include="Component\PictureBox.cpp" />

@@ -8,13 +8,9 @@ Tile::Tile(Point* p_pos, int p_num)
 
 void Tile::Init(Point* p_pos, int p_num)
 {
-	m_pos = p_pos;
-	m_size = new TILE_SIZE;
-
+	m_position = p_pos;
 	if (p_num == 0)
-		m_image = new ImageComponent(m_pos, m_size, TILE_GROUND_BRIGHTER_IMAGEPATH);
+		AddComponent(new ImageComponent(m_position, new TILE_SIZE, TILE_GROUND_BRIGHTER_IMAGEPATH));
 	else
-		m_image = new ImageComponent(m_pos, m_size, TILE_GROUND_DARKER_IMAGEPATH);
-
-	AddComponent(m_image);
+		AddComponent(new ImageComponent(m_position, new TILE_SIZE, TILE_GROUND_DARKER_IMAGEPATH));
 }

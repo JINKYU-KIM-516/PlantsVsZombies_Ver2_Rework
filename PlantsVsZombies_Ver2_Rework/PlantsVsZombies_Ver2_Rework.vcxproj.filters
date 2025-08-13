@@ -81,7 +81,7 @@
     <ClInclude Include="Manager\SystemManagers\RenderManager.h">
       <Filter>소스 파일\Manager\SystemManagers</Filter>
     </ClInclude>
-    <ClInclude Include="Component\HitBox.h">
+    <ClInclude Include="Component\HitBoxComponent.h">
       <Filter>소스 파일\Component</Filter>
     </ClInclude>
     <ClInclude Include="Component\ImageComponent.h">
@@ -143,7 +143,7 @@
     <ClCompile Include="Manager\SystemManagers\RenderManager.cpp">
       <Filter>소스 파일\Manager\SystemManagers</Filter>
     </ClCompile>
-    <ClCompile Include="Component\HitBox.cpp">
+    <ClCompile Include="Component\HitBoxComponent.cpp">
       <Filter>소스 파일\Component</Filter>
     </ClCompile>
     <ClCompile Include="Component\ImageComponent.cpp">

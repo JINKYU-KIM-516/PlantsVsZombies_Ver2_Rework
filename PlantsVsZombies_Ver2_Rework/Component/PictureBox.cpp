@@ -57,9 +57,9 @@ Size PictureBox::GetSize() const
     return m_size;
 }
 
-HitBox PictureBox::GetHitBox() const
+HitBoxComponent PictureBox::GetHitBox() const
 {
-    HitBox hitbox;
+    HitBoxComponent hitbox;
     hitbox.Init(
         m_position.GetX(),
         m_position.GetY(),
@@ -82,13 +82,13 @@ RECT PictureBox::GetRect() const
 
 bool PictureBox::IsCollided(const PictureBox* p_pictureBox)
 {
-    HitBox hitBox = this->GetHitBox();
+    HitBoxComponent hitBox = this->GetHitBox();
     return hitBox.IntersectHitBox(p_pictureBox->GetHitBox());
 }
 
 bool PictureBox::Contains(Point p_pos) const
 {
-    HitBox hitBox = this->GetHitBox();
+    HitBoxComponent hitBox = this->GetHitBox();
     return (p_pos.GetX() >= hitBox.GetLeft() && p_pos.GetX() <= hitBox.GetRight() &&
         p_pos.GetY() >= hitBox.GetTop() && p_pos.GetY() <= hitBox.GetBottom());
 }

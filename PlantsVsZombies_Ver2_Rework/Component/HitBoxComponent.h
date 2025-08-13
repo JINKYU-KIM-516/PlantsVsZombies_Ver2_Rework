@@ -1,6 +1,6 @@
 #pragma once
 
-class HitBox
+class HitBoxComponent
 {
 protected:
 	int m_left; //왼쪽 위 모서리 x 좌표
@@ -9,7 +9,7 @@ protected:
 	int m_bottom; //오른쪽 아래 모서리 y 좌표
 public:
 	void Init(int p_left, int p_top, int p_right, int p_bottom);
-	bool IntersectHitBox(HitBox p_hitbox);
+	bool IntersectHitBox(HitBoxComponent p_hitbox);
 
 	int GetLeft() const;
 	int GetTop() const;

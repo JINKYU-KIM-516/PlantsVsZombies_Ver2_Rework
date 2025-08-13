@@ -4,6 +4,7 @@ GameObject::~GameObject()
 {
 	for (auto component : m_components)
 		delete component;
+	delete m_position;
 }
 
 void GameObject::Init()
