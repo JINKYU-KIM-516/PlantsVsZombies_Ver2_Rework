@@ -71,3 +71,7 @@ GameObject에 Point\* 멤버변수 추가, Tile과 Zombie에서 Size\* 멤버변
 ### 추가사항
 InputManager 추가 : 클릭 정보, 현재 마우스 위치 정보 등을 입력 받는 매니저</br>
 ㄴ현재 좌클릭, 마우스 위치 정보만 가지고 있으며 다른 정보 필요 시 그때그때 추가 예정
+
+Clickcomponent 추가 중</br>
+ㄴClickComponent 안에 함수 포인터를 넣어서 그걸 ClickComponent::Update에서 호하게 할지</br>
+ㄴ아니면 오브젝트에서 ClickComponent의 IsContainingMouse를 보고 오브젝트의 함수를 호출하게 할지 고민 중
