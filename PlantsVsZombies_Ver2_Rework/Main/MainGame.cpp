@@ -1,8 +1,10 @@
 #include "MainGame.h"
+#include "windowsx.h"
 #include "../Component/ImageComponent.h"
 
 #include "../Manager/SystemManagers/ImageResourceManager.h"
 #include "../Manager/SystemManagers/RenderManager.h"
+#include "../Manager/SystemManagers/InputManager.h"
 
 #include "../Manager/GameObjectManagers/GameObjectManager.h"
 #include "../Manager/GameObjectManagers/GameBoardManager.h"
@@ -35,19 +37,20 @@ void MainGame::Update()
 {
 	//m_managerManager->Update();
 	GameObjectManager::GetI()->Update();
-	ClickHandle();
 	InvalidateRect(m_hWnd, NULL, FALSE);
 }
 
-void MainGame::ClickHandle()
+void MainGame::InputUpdate(UINT message, WPARAM wParam, LPARAM lParam)
 {
-	/*
-	if (m_clickOccured)
+	switch (message)
 	{
-		m_managerManager->ClickHandle();
-		m_clickOccured = false;
+	case WM_MOUSEMOVE:
+		InputManager::GetI()->SetMousePos(GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam));
+		break;
+	case WM_LBUTTONDOWN:
+		InputManager::GetI()->LButtonClicked();
+		break;
 	}
-	*/
 }
 
 void MainGame::Draw(HWND p_hWnd)

@@ -12,7 +12,7 @@ public:
 
 	void Init(HWND p_hWnd);
 	void Update();
-	void ClickHandle();
+	void InputUpdate(UINT message, WPARAM wParam, LPARAM lParam);
 	void Draw(HWND p_hWnd);
 
 	void test();

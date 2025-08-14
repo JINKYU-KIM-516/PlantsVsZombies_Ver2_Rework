@@ -1,7 +1,7 @@
 #include "Sunflower.h"
-#include "../../Main/Constants.h"
 #include "../../Component/ImageComponent.h"
 #include "../../Component/HealthPointComponent.h"
+#include "../../Main/Constants.h"
 
 Sunflower::Sunflower(Point* p_pos)
 {

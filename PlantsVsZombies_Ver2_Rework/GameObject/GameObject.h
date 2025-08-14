@@ -3,8 +3,6 @@
 #include "../CoreFunction/Point.h"
 #include "../Component/Component.h"
 
-class GameObject;
-
 class GameObject
 {
 protected:

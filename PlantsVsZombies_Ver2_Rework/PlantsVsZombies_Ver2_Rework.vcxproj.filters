@@ -43,6 +43,9 @@
     <Filter Include="소스 파일\GameObject\Plant">
       <UniqueIdentifier>{d38f4013-0576-4272-8db0-eac5ced814c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\GameObject\Sunlight">
+      <UniqueIdentifier>{d5fa7aff-864d-499c-9930-2aa20d06b685}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -117,6 +120,15 @@
     <ClInclude Include="Component\HealthPointComponent.h">
       <Filter>소스 파일\Component</Filter>
     </ClInclude>
+    <ClInclude Include="GameObject\Sunlight\Sunlight.h">
+      <Filter>소스 파일\GameObject\Sunlight</Filter>
+    </ClInclude>
+    <ClInclude Include="Component\ClickComponent.h">
+      <Filter>소스 파일\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager\SystemManagers\InputManager.h">
+      <Filter>소스 파일\Manager\SystemManagers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PlantsVsZombies_Ver2_Rework.cpp">
@@ -178,6 +190,15 @@
     </ClCompile>
     <ClCompile Include="Component\HealthPointComponent.cpp">
       <Filter>소스 파일\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Sunlight\Sunlight.cpp">
+      <Filter>소스 파일\GameObject\Sunlight</Filter>
+    </ClCompile>
+    <ClCompile Include="Component\ClickComponent.cpp">
+      <Filter>소스 파일\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager\SystemManagers\InputManager.cpp">
+      <Filter>소스 파일\Manager\SystemManagers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

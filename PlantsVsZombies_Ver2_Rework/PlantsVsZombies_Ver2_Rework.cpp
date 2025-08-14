@@ -12,7 +12,7 @@ HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
 
-MainGame* g_mainGame = nullptr;
+MainGame g_mainGame;
 
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -43,9 +43,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     HWND hWnd = FindWindow(szWindowClass, szTitle);
 
-    g_mainGame = MainGame::GetI();
-    g_mainGame->Init(hWnd);
-    g_mainGame->test();
+    g_mainGame.Init(hWnd);
 
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_PLANTSVSZOMBIESVER2REWORK));
 
@@ -132,6 +130,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
+    g_mainGame.InputUpdate(message, wParam, lParam);
+    
     switch (message)
     {
     case WM_CREATE:
@@ -155,13 +155,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         }
         break;
     case WM_TIMER:
-        if (g_mainGame)
-            g_mainGame->Update();
+            g_mainGame.Update();
         break;
     case WM_PAINT:
     {
-        if (g_mainGame)
-            g_mainGame->Draw(hWnd);
+            g_mainGame.Draw(hWnd);
     }
     break;
     case WM_MOUSEMOVE:
