@@ -11,8 +11,8 @@ public:
 	void Update();
 	void ResetInput();
 
-	Point GetMousePos();
-	bool IsLButtonClicked();
+	Point GetMousePos() const;
+	bool IsLButtonClicked() const;
 
 	void SetMousePos(int p_x, int p_y);
 	void LButtonClicked();

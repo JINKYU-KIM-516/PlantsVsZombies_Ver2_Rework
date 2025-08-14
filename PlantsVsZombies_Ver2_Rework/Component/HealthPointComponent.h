@@ -16,8 +16,8 @@ public:
 	void TakeDamage(int p_damage);
 	void TakeHeal(int p_damage);
 
-	int GetHP();
-	bool IsAlive();
+	int GetHP() const;
+	bool IsAlive() const;
 
 	void SetHP(int p_hp);
 };

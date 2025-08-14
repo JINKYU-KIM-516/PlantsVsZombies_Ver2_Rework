@@ -162,14 +162,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             g_mainGame.Draw(hWnd);
     }
     break;
-    case WM_MOUSEMOVE:
-        //if (g_mainGame)
-            //g_mainGame->SetMousePosition(Point(GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam)));
-        break;
-    case WM_LBUTTONDOWN:
-        //if (g_mainGame)
-            //g_mainGame->ClickOccured();
-        break;
     case WM_DESTROY:
         PostQuitMessage(0);
         break;

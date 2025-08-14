@@ -37,6 +37,8 @@ void MainGame::Update()
 {
 	//m_managerManager->Update();
 	GameObjectManager::GetI()->Update();
+
+	InputManager::GetI()->Update(); //Click 정보를 초기화 하기 때문에 Update 중 가장 마지막에 와야함
 	InvalidateRect(m_hWnd, NULL, FALSE);
 }
 

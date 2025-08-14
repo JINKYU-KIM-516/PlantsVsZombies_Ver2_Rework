@@ -10,12 +10,12 @@ void InputManager::ResetInput()
 	m_isLButtonClicked = false;
 }
 
-Point InputManager::GetMousePos()
+Point InputManager::GetMousePos() const
 {
 	return m_currentMousePos;
 }
 
-bool InputManager::IsLButtonClicked()
+bool InputManager::IsLButtonClicked() const
 {
 	return m_isLButtonClicked;
 }

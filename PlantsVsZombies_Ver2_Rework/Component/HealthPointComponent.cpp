@@ -32,12 +32,12 @@ void HealthPointComponent::TakeHeal(int p_damage)
 	m_healthPoint += p_damage;
 }
 
-int HealthPointComponent::GetHP()
+int HealthPointComponent::GetHP() const
 {
 	return m_healthPoint;
 }
 
-bool HealthPointComponent::IsAlive()
+bool HealthPointComponent::IsAlive() const
 {
 	return m_isAlive;
 }
