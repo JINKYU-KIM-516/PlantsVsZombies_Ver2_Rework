@@ -61,8 +61,13 @@ Zombie에 HealthPointComponent 추가</br>
 ㄴ이후 Attack 추가 예정
 
 ##2025.8.13
-## 추가사항
-Component들 이름 수정 : 가독성 증가
+### 추가사항
+Component들 이름 수정 : 가독성 증가</br>
 ㄴMove -> MoveComponent, Image -> ImageComponent, HitBox -> HitBoxComponent로 수정
 
 GameObject에 Point\* 멤버변수 추가, Tile과 Zombie에서 Size\* 멤버변수 삭제 : HitBot와 Image의 크기가 다를 수 있기 때문
+
+##2025.08.14
+### 추가사항
+InputManager 추가 : 클릭 정보, 현재 마우스 위치 정보 등을 입력 받는 매니저</br>
+ㄴ현재 좌클릭, 마우스 위치 정보만 가지고 있으며 다른 정보 필요 시 그때그때 추가 예정
